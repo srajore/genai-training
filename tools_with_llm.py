@@ -39,7 +39,7 @@ llm_with_tool = llm.bind_tools([multiply])
 
 chain= llm_with_tool | (lambda x: x.tool_calls[0]["args"]) | multiply
 
-print(chain.invoke("what is 5 times 11 "))
+#print(chain.invoke("what is 5 times 11 "))
 
 
 
